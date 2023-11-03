@@ -26,6 +26,9 @@ set_seed(42)
 # logger.warning("WARN")
 
 def build_model(model_name, file_path):
+    """
+    Build the model
+    """
     args = Args()
     device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 
@@ -96,9 +99,10 @@ def build_model(model_name, file_path):
     print(model.config)
 
 if __name__ == '__main__':
-
+    """
+    Initialize arguments and run the model
+    """
     args = Args()
-
     model_name = args.model_name
 
     # parser = argparse.ArgumentParser()

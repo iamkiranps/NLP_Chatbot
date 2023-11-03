@@ -13,7 +13,7 @@ from arguments import Args
 
 def generate_response(input_text, conversation_history=[]):
     """
-    Generates ChatBot Responses
+    Generate ChatBot Responses
     """
     args = Args()
     # Encode the conversation history and user input
@@ -46,6 +46,9 @@ def generate_response(input_text, conversation_history=[]):
     return response, conversation_history
 
 if __name__ == '__main__':
+    """
+    Initialize and start chatbot
+    """
     args = Args()
 
     # Load the model and tokenizer from disk
